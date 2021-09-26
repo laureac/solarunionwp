@@ -11,8 +11,53 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  margin: 0;
+  line-height: 1.5;
+}
+
+#theme-content h1, #theme-content h2, #theme-content h3, #theme-content h4, #theme-content h5, #theme-content h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  line-height: 1.2;
+}
+#theme-content .h1, #theme-content h1 {
+  font-size: 2.5rem;
+}
+#theme-content .h2, #theme-content h2 {
+  font-size: 2rem;
+}
+#theme-content .h3, #theme-content h3 {
+  font-size: 1.75rem;
+}
+#theme-content .h4, #theme-content h4 {
+  font-size: 1.5rem;
+}
+#theme-content p {
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+#theme-content .container {
+  max-width: 1140px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+#theme-content .narrower {
+  width: 800px;
+}
 #theme-content a:link {
   text-decoration: none;
+  font-family: "Mulish", sans-serif;
+  color: black;
 }
 #theme-content button:focus {
   outline: 0 !important;
@@ -86,25 +131,155 @@ html {
   clear: both;
   padding: 20px;
 }
-#theme-content #introduction {
-  position: relative;
-}
-#theme-content .sticky {
-  position: sticky;
-  top: 10px;
+#theme-content .text-center {
+  text-align: center;
 }
 
-#theme-content h1, #theme-content h2, #theme-content h3, #theme-content h4, #theme-content h5, #theme-content h6 {
-  font-family: "Poppins", sans-serif;
-}
-#theme-content p {
-  font-family: "Mulish", sans-serif;
-}
-#theme-content .container {
-  max-width: 1140px;
+.navbar {
+  position: fixed;
+  top: 10px;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  z-index: 11;
+}
+
+#home .cta-banner {
+  background-color: #f7f7f7;
+}
+#home .cta-banner .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#home .cta-banner .container a {
+  font-weight: 700;
+}
+#home .card {
+  background: white;
+  margin: 1rem 0;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(225, 225, 225, 0.25);
+}
+#home .main {
+  min-height: 100vh;
+  background-size: cover;
+  height: 100%;
+}
+#home .main:before {
+  content: "";
+  background: linear-gradient(-90deg, rgba(15, 15, 15, 0.1) 20%, #0f0f0f 100%);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+#home .main .container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+#home .main .container .content {
+  color: #fff;
+  position: absolute;
+  width: 1140px;
+  max-width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+}
+#home .main .container .content h1 {
+  font-size: 6em;
+  max-width: 800px;
+}
+#home .main .container .content a {
+  color: white;
+}
+#home .introduction h2 {
+  font-size: 2.5rem;
+}
+#home .ups {
+  background-color: #0f0f0f;
+  box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.9);
+  background-size: cover;
+}
+#home .ups .wrapper-intro {
+  color: white;
+}
+#home .ups .wrapper-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#home .ups .wrapper-cards .card {
+  width: 31%;
+}
+#home .ups .wrapper-cards .card .img-wrapper {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px 10px 0px 0px;
+}
+#home .ups .wrapper-cards .card .img-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#home .ups .wrapper-cards .card .content-wrapper {
+  padding: 2rem;
+}
+#home .testimonials .tesimonial {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+#home .testimonials .tesimonial .img-wrapper {
+  width: 40%;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#home .testimonials .tesimonial .img-wrapper img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+}
+#home .testimonials .tesimonial .quote {
+  padding-left: 4rem;
+  width: 60%;
+}
+#home .services {
+  display: flex;
+  background-color: #0f0f0f;
+  color: white;
+}
+#home .products {
+  background-color: #0f0f0f;
+  color: white;
+}
+#home .products .row {
+  display: flex;
+  align-items: center;
+}
+#home .products .row img {
+  width: 40%;
+  top: 0;
+}
+#home .products .row .feature {
+  width: 60%;
+  padding: 0 5rem;
+}
+#home .products .row:nth-child(2) {
+  flex-direction: row-reverse;
 }
