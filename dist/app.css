@@ -135,11 +135,21 @@ body {
   text-align: center;
 }
 
-.navbar {
-  position: fixed;
-  top: 10px;
+.top-navigation {
+  position: relative;
+  width: 100%;
+}
+.top-navigation .navbar {
+  position: absolute;
+  top: 0px;
   width: 100%;
   z-index: 11;
+  display: flex;
+  list-style: none;
+}
+.top-navigation .navbar a {
+  color: white !important;
+  padding: 0 10px;
 }
 
 #home .cta-banner {
@@ -166,7 +176,7 @@ body {
 }
 #home .main:before {
   content: "";
-  background: linear-gradient(-90deg, rgba(15, 15, 15, 0.1) 20%, #0f0f0f 100%);
+  background: linear-gradient(-90deg, rgba(15, 15, 15, 0.1) 20%, #0f0f0f 80%, #0f0f0f 100%);
   background-position: center;
   background-size: cover;
   position: absolute;
@@ -203,7 +213,7 @@ body {
 }
 #home .ups {
   background-color: #0f0f0f;
-  box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.9);
+  box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.88);
   background-size: cover;
 }
 #home .ups .wrapper-intro {

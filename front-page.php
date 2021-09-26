@@ -40,7 +40,7 @@
             </div>
         </div>
     </section>
-    <section class="ups"
+    <section id='warranty' class="ups"
     <?php $image = get_field( 'background_image' );
             if ( !empty( $image ) ): ?>
                 style="background-image:url('<?php echo $image; ?>');"
@@ -131,7 +131,7 @@
             </div>
         </div>
     </section>
-    <section class="services" >
+    <section id='services' class="services" >
         <div class="container">
             <div class='gutter-top-xl narrower'>
                 <?php if( get_field('services_heading') ): ?>
@@ -143,7 +143,7 @@
             </div>
         </div>
     </section>
-    <section class="products gutter-bottom-xl" >
+    <section id='products' class="products gutter-bottom-xl" >
         <div class="container">
             <div class='row gutter-top'>
 

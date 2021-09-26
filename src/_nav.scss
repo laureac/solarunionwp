@@ -1,6 +1,19 @@
-.navbar{
-    position: fixed;
-    top: 10px;
+.top-navigation{
+    position: relative;
     width: 100%;
-    z-index: 11;
+
+    .navbar{
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        z-index: 11;
+        display: flex;
+        list-style: none;
+    
+        a{
+            color: white !important;
+            padding: 0 10px;
+        }
+    }
 }
+    
