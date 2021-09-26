@@ -1,0 +1,26 @@
+@import "./global";
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+#theme-content {
+
+	h1,h2,h3,h4,h5,h6 {
+		font-family: 'Poppins', sans-serif;;
+	}
+
+	p {
+		font-family: 'Mulish', sans-serif;
+	    // line-height: 24px;
+     //    letter-spacing: 0.2px;
+	}
+    
+    .container{
+        max-width: 1140px;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+

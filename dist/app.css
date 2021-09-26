@@ -1,0 +1,110 @@
+@import url(https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Space+Mono&display=swap);
+/*
+	Buttons, links etc
+*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#theme-content a:link {
+  text-decoration: none;
+}
+#theme-content button:focus {
+  outline: 0 !important;
+}
+#theme-content strong {
+  font-weight: 600;
+}
+#theme-content .narrow {
+  max-width: 800px;
+  margin: auto;
+}
+#theme-content .btn {
+  white-space: normal;
+  transition: all 350ms ease-in-out;
+  padding: 12px 20px;
+  margin-top: 5px;
+  margin-right: 5px;
+  font-weight: 700;
+  font-size: 80%;
+  border-radius: 0;
+  color: #fff;
+}
+#theme-content .btn i {
+  margin-left: 30px;
+}
+#theme-content .gutter {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#theme-content .gutter-xl {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#theme-content .gutter-top-xl {
+  padding-top: 100px;
+}
+#theme-content .gutter-bottom-xl {
+  padding-bottom: 100px;
+}
+#theme-content .gutter-top {
+  padding-top: 50px;
+}
+#theme-content .gutter-bottom {
+  padding-bottom: 50px;
+}
+#theme-content .main {
+  z-index: 10;
+  position: relative;
+}
+#theme-content .brand-line {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+#theme-content .bg-white {
+  background-color: #fff;
+}
+#theme-content .bg-black {
+  background-color: #000;
+}
+#theme-content .bg-black h1, #theme-content .bg-black h2, #theme-content .bg-black h3, #theme-content .bg-black h4, #theme-content .bg-black h5, #theme-content .bg-black h6, #theme-content .bg-black p, #theme-content .bg-black span, #theme-content .bg-black ul, #theme-content .bg-black li {
+  color: #fff;
+}
+#theme-content img {
+  width: 100%;
+  height: auto;
+}
+#theme-content .clear {
+  clear: both;
+  padding: 20px;
+}
+#theme-content #introduction {
+  position: relative;
+}
+#theme-content .sticky {
+  position: sticky;
+  top: 10px;
+}
+
+#theme-content h1, #theme-content h2, #theme-content h3, #theme-content h4, #theme-content h5, #theme-content h6 {
+  font-family: "Poppins", sans-serif;
+}
+#theme-content p {
+  font-family: "Mulish", sans-serif;
+}
+#theme-content .container {
+  max-width: 1140px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
