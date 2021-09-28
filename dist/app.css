@@ -54,10 +54,13 @@ body {
 #theme-content .narrower {
   width: 800px;
 }
+#theme-content a {
+  color: #f98e1d;
+}
 #theme-content a:link {
   text-decoration: none;
   font-family: "Mulish", sans-serif;
-  color: black;
+  color: #f98e1d;
 }
 #theme-content button:focus {
   outline: 0 !important;
@@ -151,6 +154,14 @@ body {
   color: white !important;
   padding: 0 10px;
 }
+.top-navigation .custom-logo-link {
+  position: absolute;
+  top: 20px;
+  z-index: 12;
+  width: 300px;
+  right: 20px;
+  height: auto;
+}
 
 #home .cta-banner {
   background-color: #f7f7f7;
@@ -170,13 +181,13 @@ body {
   box-shadow: 0px 4px 4px rgba(225, 225, 225, 0.25);
 }
 #home .main {
-  min-height: 100vh;
+  min-height: 800px;
   background-size: cover;
   height: 100%;
 }
 #home .main:before {
   content: "";
-  background: linear-gradient(-90deg, rgba(15, 15, 15, 0.1) 20%, #0f0f0f 80%, #0f0f0f 100%);
+  background: linear-gradient(-90deg, rgba(11, 9, 24, 0.1) 20%, #0b0918 85%, #0b0918 100%);
   background-position: center;
   background-size: cover;
   position: absolute;
@@ -211,9 +222,16 @@ body {
 #home .introduction h2 {
   font-size: 2.5rem;
 }
+#home .introduction .awards-logos {
+  display: flex;
+}
+#home .introduction .awards-logos img {
+  max-width: 25%;
+  padding-right: 2rem;
+}
 #home .ups {
-  background-color: #0f0f0f;
-  box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.88);
+  background-color: #0b0918;
+  box-shadow: inset 0 0 0 100vw rgba(11, 9, 24, 0.9);
   background-size: cover;
 }
 #home .ups .wrapper-intro {
@@ -271,20 +289,25 @@ body {
 }
 #home .services {
   display: flex;
-  background-color: #0f0f0f;
-  color: white;
-}
-#home .products {
-  background-color: #0f0f0f;
-  color: white;
 }
 #home .products .row {
   display: flex;
-  align-items: center;
+  align-items: stretch;
 }
-#home .products .row img {
-  width: 40%;
-  top: 0;
+#home .products .row .tabcontent {
+  width: 70%;
+  justify-content: center;
+  text-align: center;
+}
+#home .products .row .tabcontent:first-child {
+  display: block;
+}
+#home .products .row .featured-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+  align-items: center;
 }
 #home .products .row .feature {
   width: 60%;
@@ -292,4 +315,99 @@ body {
 }
 #home .products .row:nth-child(2) {
   flex-direction: row-reverse;
+}
+#home .contact .icons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+#home .contact .icons .icon {
+  width: 33.3333333333%;
+}
+#home .parallax {
+  overflow: hidden;
+}
+#home .parallax .parallax-image {
+  padding-top: 50%;
+  position: relative;
+}
+#home .parallax .parallax-image .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  width: 100%;
+}
+#home .parallax .parallax-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.footer {
+  background-color: #0b0918;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 5rem;
+  padding-left: 5rem;
+}
+.footer img {
+  max-width: 30%;
+}
+.footer .menu-footer-menu-container ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+.footer .menu-footer-menu-container ul a {
+  color: white !important;
+  padding: 0 10px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: transparent;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  color: #f98e1d;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  -webkit-animation: fadeEffect 1s;
+          animation: fadeEffect 1s;
+}
+
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

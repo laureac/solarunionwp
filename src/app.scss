@@ -3,6 +3,7 @@
 
 $color-primary: #f98e1d;
 $bg-black: rgb(15, 15, 15);
+$color-secondary: rgb(11, 9, 24);
 
 #home{
 
@@ -28,13 +29,13 @@ $bg-black: rgb(15, 15, 15);
     }
     
     .main{
-        min-height: 100vh;
+        min-height: 800px;
         background-size: cover;
         height: 100%;
 
         &:before {
             content: '';
-            background: linear-gradient( -90deg, rgba(15,15,15,.1) 20%,rgba(15,15,15,1) 80%, rgb(15, 15, 15, 1) 100%);
+            background: linear-gradient( -90deg, rgba(11, 9, 24, 0.1) 20%,rgba(11, 9, 24,1) 85%, rgb(11, 9, 24, 1) 100%);
             background-position: center;
             background-size: cover;
             position: absolute;
@@ -76,11 +77,18 @@ $bg-black: rgb(15, 15, 15);
         h2{
             font-size: 2.5rem;
         }
+        .awards-logos{
+            display: flex;
+            img{
+                max-width: 25%;
+                padding-right: 2rem;
+            }
+        }
     }
 
     .ups{
-        background-color: $bg-black;
-        box-shadow: inset 0 0 0 100vw rgb(0 0 0 / 88%);
+        background-color: $color-secondary;
+        box-shadow: inset 0 0 0 100vw rgba(11, 9, 24, 0.9);
         background-size: cover;
 
         .wrapper-intro{
@@ -148,17 +156,13 @@ $bg-black: rgb(15, 15, 15);
 
     .services{
         display: flex;
-        background-color: $bg-black;
-        color: white;
     }
 
     .products{
-        background-color: $bg-black;
-        color: white;
 
         .row{
             display: flex;
-            align-items: center;
+            align-items: stretch;
 
             // .card{
             //     position: relative;
@@ -173,9 +177,22 @@ $bg-black: rgb(15, 15, 15);
             //         top: 0;
             //     }
             // }
-            img{
-                width: 40%;
-                top: 0;
+            .tabcontent{
+                width: 70%;
+                justify-content: center;
+                text-align: center;
+
+                &:first-child{
+                    display: block;
+                }
+            }
+
+            .featured-items{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 30%;
+                align-items: center;
             }
 
             .feature{
@@ -188,5 +205,98 @@ $bg-black: rgb(15, 15, 15);
             }
         }
     }
-}
+    .contact{
+        .icons{
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
 
+            .icon{
+                width: calc(100%/3);
+            }
+        }
+    }
+
+    .parallax{
+        overflow: hidden;
+        
+        .parallax-image  {
+            padding-top: 50%;
+            position:relative;
+            .container{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+                width: 100%;
+            }
+            img{
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height: auto;
+            }
+        }
+    }
+
+}
+.footer{
+    background-color: $color-secondary;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 5rem;
+    padding-left: 5rem;
+
+    img{
+        max-width: 30%;
+    }
+
+    .menu-footer-menu-container{
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            width: 50%;
+
+            a{
+                color: white !important;
+                padding: 0 10px;
+            }
+        }
+    }
+}
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: transparent;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    color: $color-primary;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    animation: fadeEffect 1s; 
+  }
+
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+ 
+
+  
