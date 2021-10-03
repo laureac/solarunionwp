@@ -3,6 +3,7 @@
 */
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -15,7 +16,7 @@ body{
 
 	
 	h1,h2,h3,h4,h5,h6 {
-		font-family: 'Poppins', sans-serif;
+		font-family: 'Inter', sans-serif;
         font-weight: 500;
 		font-size: 16px;
 		margin-bottom: .5rem;
@@ -40,7 +41,7 @@ body{
 	}
 
 	p {
-		font-family: 'Mulish', sans-serif;
+		font-family: 'Space Mono', sans-serif;
 		font-size: 16px;
 		font-weight: 400;
 		margin-top: 0;
@@ -59,14 +60,14 @@ body{
     }
 
 	.narrower{
-		width: 800px;
+		width: 66.66%;
 	}
 
 	a {
 		color: #f98e1d;
 		&:link{
 			text-decoration: none;
-			font-family: 'Mulish', sans-serif;
+			font-family: 'Inter', sans-serif;
 			color: #f98e1d;
 		}
 	}

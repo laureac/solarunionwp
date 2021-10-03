@@ -12,8 +12,17 @@ $color-secondary: rgb(11, 9, 24);
 
         .container{
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            h2{
+                font-size: 2.5rem;
+                width: 33%;
+            }
+            p{
+                width: 66%;
+                padding-left: 5rem;
+            }
 
             a{
                 font-weight: 700;
@@ -27,7 +36,27 @@ $color-secondary: rgb(11, 9, 24);
         border-radius: 10px;
         box-shadow: 0px 4px 4px rgb(225 225 225 / 25%);
     }
+
+    .bg-third-w-to-b {
+        background-image: linear-gradient(90deg,#f7f7f7 66.66%,#fff 0);
+    }
     
+    .smallHeading{
+        font-family: 'Space Mono';
+        letter-spacing: .3rem;
+        font-size: .8rem;
+        text-transform: uppercase;
+        color: rgb(199, 199, 199);
+    }
+    .items{
+        background-color: $color-secondary;
+        color: white;
+
+        .container{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
     .main{
         min-height: 800px;
         background-size: cover;
@@ -74,26 +103,49 @@ $color-secondary: rgb(11, 9, 24);
     }
 
     .introduction{
-        h2{
-            font-size: 2.5rem;
-        }
-        .awards-logos{
+        .wrapper{
             display: flex;
-            img{
-                max-width: 25%;
-                padding-right: 2rem;
+            flex-wrap: wrap;
+
+            h2{
+                font-size: 2.5rem;
+                width: 33%;
+            }
+            .content-wrapper{
+                width: 66%;
+                padding-left: 5rem;
+                .awards-logos{
+                    display: flex;
+                    
+                    img{
+                        max-width: 25%;
+                        padding-right: 2rem;
+                    }
+                }
             }
         }
     }
 
-    .ups{
-        background-color: $color-secondary;
-        box-shadow: inset 0 0 0 100vw rgba(11, 9, 24, 0.9);
-        background-size: cover;
-
-        .wrapper-intro{
+    .blocks-image-text{
+        .block{
+            display: flex;
+            background-color: $color-secondary;
             color: white;
+
+            .text-wrapper{
+                width: calc(100% / 3);
+                padding: 5rem;
+            }
+
+            .img-wrapper{
+                width: calc(100% / 3 *2);
+                max-height: 800px;
+                overflow: hidden;
+            }
         }
+    }
+
+    .multiple-posts{
         
         .wrapper-cards{
             display: flex;
@@ -101,7 +153,7 @@ $color-secondary: rgb(11, 9, 24);
             flex-wrap: wrap;
 
             .card{
-                width: 31%;
+                width: 32%;
 
                 .img-wrapper{
                     height: 200px;
@@ -131,14 +183,14 @@ $color-secondary: rgb(11, 9, 24);
             display: flex;
             flex-wrap: wrap;
             align-items: center;
+            border: 1px solid grey;
+            background-color: white;
 
             .img-wrapper{
                 width: 40%;
-                height: 400px;
-                border-radius: 10px;
+                height: 500px;
                 overflow: hidden;
                 position: relative;
-                box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
 
                 img{
                     height: 100%;
@@ -148,14 +200,25 @@ $color-secondary: rgb(11, 9, 24);
                 }
             }
             .quote{
-                padding-left: 4rem;
+                padding: 4rem;
                 width: 60%;
             }
         }
     }
 
     .services{
-        display: flex;
+        .wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            h2{
+                font-size: 2.5rem;
+                width: 33%;
+            }
+            p{
+                width: 66%;
+                padding-left: 5rem;
+            }
+        }
     }
 
     .products{
@@ -163,6 +226,7 @@ $color-secondary: rgb(11, 9, 24);
         .row{
             display: flex;
             align-items: stretch;
+            border: 1px solid black;
 
             // .card{
             //     position: relative;
@@ -206,6 +270,11 @@ $color-secondary: rgb(11, 9, 24);
         }
     }
     .contact{
+        background-color: $color-secondary;
+        color: white;
+        p{
+            margin: auto;
+        }
         .icons{
             display: flex;
             justify-content: space-around;
@@ -223,6 +292,42 @@ $color-secondary: rgb(11, 9, 24);
         .parallax-image  {
             padding-top: 50%;
             position:relative;
+
+            &:nth-child(even){
+                .container{
+                    text-align: right;
+                    p{
+                        margin-left: auto;
+                    }
+                }
+
+                &:after {
+                    content: '';
+                    background: linear-gradient( 90deg, rgba(11, 9, 24, 0.1) 20%,rgba(11, 9, 24,1) 85%, rgb(11, 9, 24, 1) 100%);
+                    background-position: center;
+                    background-size: cover;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    width: 100%;
+                }
+            }
+
+            &:after {
+                content: '';
+                background: linear-gradient( -90deg, rgba(11, 9, 24, 0.1) 20%,rgba(11, 9, 24,1) 85%, rgb(11, 9, 24, 1) 100%);
+                background-position: center;
+                background-size: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+            }
+
             .container{
                 position: absolute;
                 top: 50%;
@@ -230,6 +335,7 @@ $color-secondary: rgb(11, 9, 24);
                 transform: translate(-50%, -50%);
                 color: white;
                 width: 100%;
+                z-index: 10;
             }
             img{
                 position:absolute;
@@ -237,6 +343,7 @@ $color-secondary: rgb(11, 9, 24);
                 left:0;
                 width:100%;
                 height: auto;
+                
             }
         }
     }
