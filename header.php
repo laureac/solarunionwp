@@ -17,7 +17,15 @@
 </header>
 
 <body <?php body_class(); ?> id="theme-content">
-    <!-- <div id="loading-screen" style="position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 9999; background-color: #fff; text-align: center; padding-top: calc(50vh - 100px);">
-		
-	</div> -->
+    <div id="loading-screen" class='bg-black' style="position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 9999; text-align: center;">
+        <div id=LoadingBar>
+            <div class=orangebox id=box1></div>
+            <div class=orangebox id=box2></div>
+            <div class=orangebox id=box3></div>
+            <div class=orangebox id=box4></div>
+            <div class=orangebox id=box5></div>
+            <div class=orangebox id=box6></div>
+            <div class=orangebox id=box7></div>
+        </div>
+	</div>
     

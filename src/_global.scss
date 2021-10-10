@@ -51,17 +51,13 @@ body{
 	}
 
 	.container{
-        max-width: 1140px;
+        max-width: 90%;
         width: 100%;
         padding-right: 15px;
         padding-left: 15px;
         margin-right: auto;
         margin-left: auto;
     }
-
-	.narrower{
-		width: 66.66%;
-	}
 
 	a {
 		color: #f98e1d;
@@ -143,7 +139,7 @@ body{
 		background-color: #fff;
 	}
 	.bg-black {
-		background-color: #000;
+		background-color: rgb(15, 15, 15);
 		h1,h2,h3,h4,h5,h6,p,span,ul,li {
 			color: #fff;
 		}
